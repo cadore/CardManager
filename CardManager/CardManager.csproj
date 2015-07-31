@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4AF1AC9-D684-464B-9EF3-A0C98FC42B89}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CardManager</RootNamespace>
+    <AssemblyName>CardManager</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CadoreFTP">
+      <HintPath>..\..\..\DLL\CadoreFTP.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v14.1, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v14.1.Core, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v14.1.Core, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v14.1.Core, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.1.Core, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v14.1.Core, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v14.1.Core, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1.UI, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v14.1, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v14.1, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v14.1.Core, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.1, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v14.1.Extensions, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v14.1, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v14.1.Core, Version=14.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DSBarCode">
+      <HintPath>..\..\..\DLL\DSBarCode.dll</HintPath>
+    </Reference>
+    <Reference Include="MobiDLL">
+      <HintPath>..\..\MobiDLL\MobiDLL\bin\Debug\MobiDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\packages\Npgsql.2.2.5\lib\net45\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\packages\Npgsql.2.2.5\lib\net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureApp">
+      <HintPath>..\..\..\DLL\SecureApp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Generated\Database.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PetaPoco.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\BarCode\BarCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\BarCode\BarCodeForm.Designer.cs">
+      <DependentUpon>BarCodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\EmissionCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\EmissionCardForm.Designer.cs">
+      <DependentUpon>EmissionCardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\Print\PrintCard.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\Print\PrintCard.Designer.cs">
+      <DependentUpon>PrintCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Credentialeds\CredentialedForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Credentialeds\CredentialedForm.Designer.cs">
+      <DependentUpon>CredentialedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Credentialeds\Payments\NewPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Credentialeds\Payments\NewPaymentForm.Designer.cs">
+      <DependentUpon>NewPaymentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Credentialeds\SearchCredentialedsForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Credentialeds\SearchCredentialedsForm.Designer.cs">
+      <DependentUpon>SearchCredentialedsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Customers\CustomerForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Customers\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Customers\SearchCustomersForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Customers\SearchCustomersForm.Designer.cs">
+      <DependentUpon>SearchCustomersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DesktopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DesktopForm.Designer.cs">
+      <DependentUpon>DesktopForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Helper\NeedHelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Helper\NeedHelpForm.Designer.cs">
+      <DependentUpon>NeedHelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Inputs\InputForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Inputs\InputForm.Designer.cs">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Inputs\SearchInputForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Inputs\SearchInputForm.Designer.cs">
+      <DependentUpon>SearchInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Login\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SplashScreens\PleaseWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SplashScreens\PleaseWaitForm.Designer.cs">
+      <DependentUpon>PleaseWaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SplashScreens\SplashScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SplashScreens\SplashScreenForm.Designer.cs">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SplashScreens\UploadWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SplashScreens\UploadWaitForm.Designer.cs">
+      <DependentUpon>UploadWaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Users\ChangePasswordUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Users\ChangePasswordUserForm.Designer.cs">
+      <DependentUpon>ChangePasswordUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Users\SearchUsersForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Users\SearchUsersForm.Designer.cs">
+      <DependentUpon>SearchUsersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Users\UserForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Users\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Utils\ControlsUtil.cs" />
+    <Compile Include="UI\Utils\UserControlUtil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utils\CardUtils.cs" />
+    <Compile Include="Utils\ConnectionUtil.cs" />
+    <Compile Include="Utils\Database.cs" />
+    <Compile Include="Utils\Dates.cs" />
+    <Compile Include="Utils\FTPUtil.cs" />
+    <Compile Include="Utils\INI.cs" />
+    <Compile Include="Utils\RunUtil.cs" />
+    <Compile Include="Utils\SearchCPFCNPJUtil.cs" />
+    <Compile Include="Utils\Singleton.cs" />
+    <Compile Include="Utils\TabControlUtil.cs" />
+    <Compile Include="Utils\Util.cs" />
+    <Compile Include="Utils\Validations.cs" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\BarCode\BarCodeForm.resx">
+      <DependentUpon>BarCodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\EmissionCardForm.resx">
+      <DependentUpon>EmissionCardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\Print\PrintCard.resx">
+      <DependentUpon>PrintCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Credentialeds\CredentialedForm.resx">
+      <DependentUpon>CredentialedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Credentialeds\Payments\NewPaymentForm.resx">
+      <DependentUpon>NewPaymentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Credentialeds\SearchCredentialedsForm.resx">
+      <DependentUpon>SearchCredentialedsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Customers\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Customers\SearchCustomersForm.resx">
+      <DependentUpon>SearchCustomersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DesktopForm.resx">
+      <DependentUpon>DesktopForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Helper\NeedHelpForm.resx">
+      <DependentUpon>NeedHelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Inputs\InputForm.resx">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Inputs\SearchInputForm.resx">
+      <DependentUpon>SearchInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SplashScreens\PleaseWaitForm.resx">
+      <DependentUpon>PleaseWaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SplashScreens\SplashScreenForm.resx">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SplashScreens\UploadWaitForm.resx">
+      <DependentUpon>UploadWaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Users\ChangePasswordUserForm.resx">
+      <DependentUpon>ChangePasswordUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Users\SearchUsersForm.resx">
+      <DependentUpon>SearchUsersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Users\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Models\Generated\Database.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Database.cs</LastGenOutput>
+    </None>
+    <None Include="Models\Generated\PetaPoco.Core.ttinclude" />
+    <None Include="Models\Generated\PetaPoco.Generator.ttinclude" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\CardManagerRepo.address.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.business.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.CardRepo+IFactory.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.CardRepo+Record`1.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.CardRepo.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.city.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.credentialed.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.customer.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.input.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.logins.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.organ_emitter.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.output.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.phones_customer.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.receipts_credentialeds.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.renovations_card.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.resposibles_credentialed.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.sm.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.sms.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.state.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.user.datasource" />
+    <None Include="Properties\DataSources\CardManagerRepo.uses_of_card.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_sistema_union.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\front_card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\SMS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\WCButtons\WCButtons.csproj">
+      <Project>{29f95c63-598a-4ab1-8c10-bd1f955c9d66}</Project>
+      <Name>WCButtons</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
