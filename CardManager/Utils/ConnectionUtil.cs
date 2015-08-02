@@ -2,7 +2,7 @@
 using ModelsCardManager.Utils;
 using System;
 
-namespace ModelsCardManager.Connection
+namespace CardManager.Connection
 {
     public class ConnectionUtil
     {

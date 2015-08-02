@@ -1,7 +1,7 @@
 ﻿using CardManagerRepo;
 using System;
 
-namespace ModelsCardManager
+namespace CardManager
 {
     public class Singleton
     {

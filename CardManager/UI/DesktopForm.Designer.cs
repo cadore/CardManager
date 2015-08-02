@@ -46,8 +46,11 @@
             this.btnChangeCurrentBusiness = new DevExpress.XtraBars.BarButtonItem();
             this.btnNewInput = new DevExpress.XtraBars.BarButtonItem();
             this.btnSearchInputs = new DevExpress.XtraBars.BarButtonItem();
+            this.btnNewOutput = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSearchOutputs = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -57,7 +60,6 @@
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.tabControl = new DevExpress.XtraTab.XtraTabControl();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).BeginInit();
             this.SuspendLayout();
@@ -81,9 +83,10 @@
             this.btnChangeCurrentBusiness,
             this.btnNewInput,
             this.btnSearchInputs,
-            this.barButtonItem4});
+            this.btnNewOutput,
+            this.btnSearchOutputs});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 20;
+            this.ribbon.MaxItemId = 21;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage3,
@@ -195,10 +198,27 @@
             this.btnSearchInputs.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnSearchInputs.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSearchInputs_ItemClick);
             // 
+            // btnNewOutput
+            // 
+            this.btnNewOutput.Caption = "Nova  Saida";
+            this.btnNewOutput.Id = 19;
+            this.btnNewOutput.Name = "btnNewOutput";
+            this.btnNewOutput.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnNewOutput.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNewOutput_ItemClick);
+            // 
+            // btnSearchOutputs
+            // 
+            this.btnSearchOutputs.Caption = "Consultar Saidas";
+            this.btnSearchOutputs.Id = 20;
+            this.btnSearchOutputs.Name = "btnSearchOutputs";
+            this.btnSearchOutputs.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnSearchOutputs.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSearchOutputs_ItemClick);
+            // 
             // ribbonPage3
             // 
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup6});
+            this.ribbonPageGroup6,
+            this.ribbonPageGroup7});
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "CAIXA";
             // 
@@ -207,10 +227,18 @@
             this.ribbonPageGroup6.AllowTextClipping = false;
             this.ribbonPageGroup6.ItemLinks.Add(this.btnNewInput);
             this.ribbonPageGroup6.ItemLinks.Add(this.btnSearchInputs);
-            this.ribbonPageGroup6.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.ShowCaptionButton = false;
             this.ribbonPageGroup6.Text = "Entradas Avulsas";
+            // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.AllowTextClipping = false;
+            this.ribbonPageGroup7.ItemLinks.Add(this.btnNewOutput);
+            this.ribbonPageGroup7.ItemLinks.Add(this.btnSearchOutputs);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.ribbonPageGroup7.ShowCaptionButton = false;
+            this.ribbonPageGroup7.Text = "Saidas";
             // 
             // ribbonPage1
             // 
@@ -295,13 +323,6 @@
             this.tabControl.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.tabControl_ControlAdded);
             this.tabControl.Resize += new System.EventHandler(this.tabControl_Resize);
             // 
-            // barButtonItem4
-            // 
-            this.barButtonItem4.Caption = "barButtonItem4";
-            this.barButtonItem4.Id = 19;
-            this.barButtonItem4.Name = "barButtonItem4";
-            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
-            // 
             // DesktopForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -355,6 +376,8 @@
         private DevExpress.XtraBars.BarButtonItem btnSearchInputs;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem btnNewOutput;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.BarButtonItem btnSearchOutputs;
     }
 }

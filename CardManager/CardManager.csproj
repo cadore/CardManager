@@ -160,6 +160,12 @@
     <Compile Include="UI\Cards\Print\PrintCard.Designer.cs">
       <DependentUpon>PrintCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Cashier\CashFlowForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cashier\CashFlowForm.Designer.cs">
+      <DependentUpon>CashFlowForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Credentialeds\CredentialedForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -202,6 +208,12 @@
     <Compile Include="UI\Helper\NeedHelpForm.Designer.cs">
       <DependentUpon>NeedHelpForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Outputs\AddReasonOutputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Outputs\AddReasonOutputForm.Designer.cs">
+      <DependentUpon>AddReasonOutputForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Inputs\InputForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -219,6 +231,18 @@
     </Compile>
     <Compile Include="UI\Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Outputs\OutputForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Outputs\OutputForm.Designer.cs">
+      <DependentUpon>OutputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Outputs\SearchOutputsForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Outputs\SearchOutputsForm.Designer.cs">
+      <DependentUpon>SearchOutputsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\SplashScreens\PleaseWaitForm.cs">
       <SubType>Form</SubType>
@@ -262,7 +286,6 @@
     </Compile>
     <Compile Include="Utils\CardUtils.cs" />
     <Compile Include="Utils\ConnectionUtil.cs" />
-    <Compile Include="Utils\Database.cs" />
     <Compile Include="Utils\Dates.cs" />
     <Compile Include="Utils\FTPUtil.cs" />
     <Compile Include="Utils\INI.cs" />
@@ -286,6 +309,9 @@
     <EmbeddedResource Include="UI\Cards\Print\PrintCard.resx">
       <DependentUpon>PrintCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cashier\CashFlowForm.resx">
+      <DependentUpon>CashFlowForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Credentialeds\CredentialedForm.resx">
       <DependentUpon>CredentialedForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,6 +333,9 @@
     <EmbeddedResource Include="UI\Helper\NeedHelpForm.resx">
       <DependentUpon>NeedHelpForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Outputs\AddReasonOutputForm.resx">
+      <DependentUpon>AddReasonOutputForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Inputs\InputForm.resx">
       <DependentUpon>InputForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +344,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Outputs\OutputForm.resx">
+      <DependentUpon>OutputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Outputs\SearchOutputsForm.resx">
+      <DependentUpon>SearchOutputsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SplashScreens\PleaseWaitForm.resx">
       <DependentUpon>PleaseWaitForm.cs</DependentUpon>
@@ -343,9 +378,6 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CardManagerRepo.address.datasource" />
     <None Include="Properties\DataSources\CardManagerRepo.business.datasource" />
-    <None Include="Properties\DataSources\CardManagerRepo.CardRepo+IFactory.datasource" />
-    <None Include="Properties\DataSources\CardManagerRepo.CardRepo+Record`1.datasource" />
-    <None Include="Properties\DataSources\CardManagerRepo.CardRepo.datasource" />
     <None Include="Properties\DataSources\CardManagerRepo.city.datasource" />
     <None Include="Properties\DataSources\CardManagerRepo.credentialed.datasource" />
     <None Include="Properties\DataSources\CardManagerRepo.customer.datasource" />
@@ -357,7 +389,6 @@
     <None Include="Properties\DataSources\CardManagerRepo.receipts_credentialeds.datasource" />
     <None Include="Properties\DataSources\CardManagerRepo.renovations_card.datasource" />
     <None Include="Properties\DataSources\CardManagerRepo.resposibles_credentialed.datasource" />
-    <None Include="Properties\DataSources\CardManagerRepo.sm.datasource" />
     <None Include="Properties\DataSources\CardManagerRepo.sms.datasource" />
     <None Include="Properties\DataSources\CardManagerRepo.state.datasource" />
     <None Include="Properties\DataSources\CardManagerRepo.user.datasource" />

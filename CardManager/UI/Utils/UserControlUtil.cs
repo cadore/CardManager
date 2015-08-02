@@ -28,14 +28,14 @@ namespace CardManager.UI.Utils
         {
             if (IsNew)
             {
-                DialogResult rs = XtraMessageBox.Show(String.Format("{0} salvo com sucesso, deseja cadastrar um novo?", s), "Cadore Tecnologia",
+                DialogResult rs = XtraMessageBox.Show(String.Format("{0} salvo(a) com sucesso, deseja cadastrar um(a) novo(a)?", s), "Cadore Tecnologia",
                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (rs == DialogResult.Yes)
                     return true;
             }
             else
             {
-                XtraMessageBox.Show(String.Format("{0} atualizado com sucesso", s), "Cadore Tecnologia");
+                XtraMessageBox.Show(String.Format("{0} atualizado(a) com sucesso", s), "Cadore Tecnologia");
             }
             desk.CloseCurrentTab();
             return false;

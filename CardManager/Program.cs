@@ -1,4 +1,5 @@
-﻿using CardManager.UI;
+﻿using CardManager.Connection;
+using CardManager.UI;
 using CardManager.UI.Login;
 using CardManager.UI.SplashScreens;
 using CardManagerRepo;
@@ -8,7 +9,6 @@ using DevExpress.UserSkins;
 using DevExpress.XtraEditors;
 using DevExpress.XtraSplashScreen;
 using ModelsCardManager;
-using ModelsCardManager.Connection;
 using ModelsCardManager.Utils;
 using System;
 using System.Collections.Generic;

@@ -29,6 +29,7 @@ using CardManager.UI.Cards;
 using DevExpress.XtraReports.Native;
 using CardManager.UI.Inputs;
 using MobiDLL;
+using CardManager.UI.Outputs;
 
 namespace CardManager.UI
 {
@@ -197,10 +198,16 @@ namespace CardManager.UI
             AddTab(sif, "Pesquisa de Entradas Avulsas", false);
         }
 
-        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnNewOutput_ItemClick(object sender, ItemClickEventArgs e)
         {
-            MobiSMS ms = new MobiSMS() { credential = "A906907DE14CB9538EEDE4F8A1316EBB6C7326ED", token = "59377a" };
-            Console.WriteLine(ms.Credits());
+            OutputForm of = new OutputForm(null);
+            AddTab(of, "Nova Saida", false);
+        }
+
+        private void btnSearchOutputs_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            SearchOutputsForm sof = new SearchOutputsForm();
+            AddTab(sof, "Pesquisar Saidas", false);
         }
     }
 }
