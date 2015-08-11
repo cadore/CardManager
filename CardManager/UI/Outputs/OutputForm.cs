@@ -22,7 +22,8 @@ namespace CardManager.UI.Outputs
             {
                 o = new output() { date = null };
                 IsNew = true;
-            }            
+            }
+            tfDate.Properties.MaxValue = output.Now();
             bdgOutput.DataSource = o;
         }
 

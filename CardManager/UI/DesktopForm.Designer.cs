@@ -48,9 +48,11 @@
             this.btnSearchInputs = new DevExpress.XtraBars.BarButtonItem();
             this.btnNewOutput = new DevExpress.XtraBars.BarButtonItem();
             this.btnSearchOutputs = new DevExpress.XtraBars.BarButtonItem();
+            this.btnViewCashFlow = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -84,9 +86,10 @@
             this.btnNewInput,
             this.btnSearchInputs,
             this.btnNewOutput,
-            this.btnSearchOutputs});
+            this.btnSearchOutputs,
+            this.btnViewCashFlow});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 21;
+            this.ribbon.MaxItemId = 22;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage3,
@@ -214,11 +217,20 @@
             this.btnSearchOutputs.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnSearchOutputs.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSearchOutputs_ItemClick);
             // 
+            // btnViewCashFlow
+            // 
+            this.btnViewCashFlow.Caption = "Visualizar Fluxo de Caixa";
+            this.btnViewCashFlow.Id = 21;
+            this.btnViewCashFlow.Name = "btnViewCashFlow";
+            this.btnViewCashFlow.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnViewCashFlow.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnViewCashFlow_ItemClick);
+            // 
             // ribbonPage3
             // 
             this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
             this.ribbonPageGroup6,
-            this.ribbonPageGroup7});
+            this.ribbonPageGroup7,
+            this.ribbonPageGroup8});
             this.ribbonPage3.Name = "ribbonPage3";
             this.ribbonPage3.Text = "CAIXA";
             // 
@@ -239,6 +251,14 @@
             this.ribbonPageGroup7.Name = "ribbonPageGroup7";
             this.ribbonPageGroup7.ShowCaptionButton = false;
             this.ribbonPageGroup7.Text = "Saidas";
+            // 
+            // ribbonPageGroup8
+            // 
+            this.ribbonPageGroup8.AllowTextClipping = false;
+            this.ribbonPageGroup8.ItemLinks.Add(this.btnViewCashFlow);
+            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.ribbonPageGroup8.ShowCaptionButton = false;
+            this.ribbonPageGroup8.Text = "Fluxo de Caixa";
             // 
             // ribbonPage1
             // 
@@ -379,5 +399,7 @@
         private DevExpress.XtraBars.BarButtonItem btnNewOutput;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.BarButtonItem btnSearchOutputs;
+        private DevExpress.XtraBars.BarButtonItem btnViewCashFlow;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
     }
 }

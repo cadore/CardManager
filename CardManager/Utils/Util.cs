@@ -69,13 +69,20 @@ namespace ModelsCardManager.Utils
         {
             if (Util.isConnectedWeb())
             {
-                System.Net.WebClient t = new System.Net.WebClient();
-                string meuip = t.DownloadString("http://meuip.net.br/");
-                return meuip
-                    .Substring(
-                    meuip.IndexOf("o Meu IP? ") + "o Meu IP? ".Length,
-                    meuip.IndexOf("</title>") - meuip.IndexOf("o Meu IP? ")
-                    - "o Meu IP? ".Length);
+                try
+                {
+                    System.Net.WebClient t = new System.Net.WebClient();
+                    string meuip = t.DownloadString("http://meuip.net.br/");
+                    return meuip
+                        .Substring(
+                        meuip.IndexOf("o Meu IP? ") + "o Meu IP? ".Length,
+                        meuip.IndexOf("</title>") - meuip.IndexOf("o Meu IP? ")
+                        - "o Meu IP? ".Length);
+                }
+                catch (Exception) 
+                {
+                    return "0.0.0.0";
+                }
             }
             else
                 return "0.0.0.0";

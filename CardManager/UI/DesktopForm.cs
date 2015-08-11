@@ -30,6 +30,7 @@ using DevExpress.XtraReports.Native;
 using CardManager.UI.Inputs;
 using MobiDLL;
 using CardManager.UI.Outputs;
+using CardManager.UI.Cashier;
 
 namespace CardManager.UI
 {
@@ -208,6 +209,12 @@ namespace CardManager.UI
         {
             SearchOutputsForm sof = new SearchOutputsForm();
             AddTab(sof, "Pesquisar Saidas", false);
+        }
+
+        private void btnViewCashFlow_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            CashFlowForm cff = new CashFlowForm();
+            AddTab(cff, "Visualizar Fluxo de Caixa", false);
         }
     }
 }

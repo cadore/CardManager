@@ -155,23 +155,21 @@ namespace CardManager.UI.Cards
                     c.CreateCardCode();
                     c.card_emitted = true;
                     if (c.value_card > 0)
-                    {
-                        /*
+                    {                       
                         input i = new input()
                         { 
                             description = String.Format("Recebimento referente á {0} do cartão {1} de cliente {2}-{3}",
                                 (c.card_emitted ? "renovação" : "emissão"), c.barcode, c.id, c.name),
-                            observation = String.Format("Valor referente á {0} do cartão {1} do cliente {2}\n----------\n{3}\n(Automático)", 
+                            observations = String.Format("Valor referente á {0} do cartão {1} do cliente {2}\n----------\n{3}\n(Automático)", 
                                 (c.card_emitted ? "renovação" : "emissão"), c.barcode, c.id, c.observation),
                             credentialed_id = 0, 
                             customer_id = c.id, 
                             date = input.Now(), 
                             value = c.value_card, 
                             registred_at = input.Now(), 
-                            registred_by = UserSingleton.getCurrentUser().id
+                            registred_by = Singleton.getCurrentUser().id
                         };
                         i.Save();
-                        */
                     }
                     c.Save();
                     scope.Complete();

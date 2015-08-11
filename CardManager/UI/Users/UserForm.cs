@@ -62,7 +62,7 @@ namespace CardManager.UI.Users
                 try
                 {
                     user u = ((user)bdgUser.Current);
-                    u.inactive = false;
+                    u.inactive = true;
                     u.Update();
                     XtraMessageBox.Show("Usuário inativado com sucesso!");
                     desk.CloseCurrentTab();

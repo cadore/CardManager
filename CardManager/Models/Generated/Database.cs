@@ -612,6 +612,15 @@ namespace CardManagerRepo
         [Column]
         public string description { get; set; }
     }
+
+    public class cash_flow
+    {
+        public string type { get; set; }
+        public string description { get; set; }
+        public DateTime date { get; set; }
+        public decimal value { get; set; }
+        public decimal balance { get; set; }
+    }
 }
 
 
